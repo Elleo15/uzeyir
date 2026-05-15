@@ -5,14 +5,17 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: black;
-  overflow: hidden;
-  color: white;
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    background:black;
+    overflow-x:hidden;
+    overflow-y:auto;
+    color:white;
+    padding-top:45px;
+    padding-bottom:80px;
 }
 
 body::before {
@@ -219,34 +222,75 @@ button:hover {
   }
 }
 
-@media (max-width: 700px) {
-  .profile {
-    width: 220px;
-    height: 220px;
-  }
+@media(max-width:700px){
 
-  .glow {
-    font-size: 42px;
-  }
+    body{
+        padding-top:30px;
+        padding-bottom:120px;
+        align-items:flex-start;
+    }
 
-  h2 {
-    font-size: 28px;
-  }
+    .container{
+        width:100%;
+        padding:20px 15px;
+    }
 
-  .message {
-    font-size: 18px;
-  }
+    .profile{
+        width:270px;
+        height:270px;
+        object-fit:cover;
+        object-position:center top;
+        margin-bottom:20px;
+    }
 
-  .cinematic-text {
-    font-size: 28px;
-    padding: 20px;
-  }
+    .glow{
+        font-size:48px;
+        line-height:1.1;
+    }
 
-  .terminal p {
-    font-size: 16px;
-  }
+    h2{
+        font-size:30px;
+        letter-spacing:4px;
+        margin-top:15px;
+    }
 
-  .terminal h3 {
-    font-size: 24px;
-  }
+    .message{
+        font-size:20px;
+        line-height:1.6;
+        margin-top:18px;
+    }
+
+    button{
+        width:90%;
+        max-width:340px;
+        font-size:22px;
+        padding:20px;
+        margin-top:28px;
+    }
+
+    #secretMessage{
+        width:100%;
+        margin-top:25px;
+    }
+
+    .terminal{
+        padding:20px;
+        border-radius:18px;
+    }
+
+    .terminal p{
+        font-size:18px;
+        line-height:1.7;
+    }
+
+    .terminal h3{
+        font-size:26px;
+        line-height:1.4;
+    }
+
+    .cinematic-text{
+        font-size:32px;
+        padding:25px;
+        line-height:1.5;
+    }
 }
